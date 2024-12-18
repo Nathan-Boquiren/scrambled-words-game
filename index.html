@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Guess the Scrambled Word!</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Guess the Word!</h1>
+
+    </header>
+
+    <div id="start-game-container">
+        <p class="instructions">Try to guess as many scrambled words you can in less than one minute.</p>
+        <button id="start-game-btn">Start Game</button>
+    </div>
+
+    <main id="app">
+
+        <div id="timer">Time left: 60 </div>
+
+        <div id="scrambled-word-container">
+            <div id="scrambled-word"></div>
+        </div>
+
+        <div id="word-guess-container">
+            <input type="text" name="guess" id="guess" placeholder="Enter your guess..." autocomplete="off">
+            <div id="submit-btn">check</div>
+        </div>
+
+        <div id="score-container">
+            <div id="score"></div>
+        </div>
+
+
+
+        <div id="status-container">
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

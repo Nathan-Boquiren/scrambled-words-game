@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+:root {
+    --backgroundColor: rgb(47, 79, 63);
+    --lightAccent: rgb(76, 114, 76)
+}
+
+
+
+body {
+    background-color: var(--backgroundColor);
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    height: 100vh;
+}
+
+header {
+    margin-top: 50px;
+    font-size: 2rem;
+}
+
+/* ===== Start Game Screen ===== */
+
+#start-game-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.instructions {
+    font-size: 1.5rem;
+}
+
+#start-game-btn {
+    border: none;
+    padding: 20px;
+    margin: 20px;
+    font-size: 2rem;
+    border-radius: 100vmax;
+    color: var(--backgroundColor);
+    box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.411);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#start-game-btn:hover {
+    transform: translateY(2px);
+    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.411);
+}
+
+#start-game-btn:active {
+    transform: translateY(5px);
+    box-shadow: none;
+}
+
+
+#app {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#timer {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 2rem;
+    background-color: rgb(28, 56, 28);
+    padding: 20px;
+    border-radius: 20px;
+    width: 400px;
+
+}
+
+#timer p span {
+    animation: zoomInRebound 0.5s cubic-bezier(0.25, 1.5, 0.5, 1) forwards;
+}
+
+#scrambled-word-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 20px;
+    background-color: var(--lightAccent);
+    margin: 20px;
+    border-radius: 20px;
+    min-width: 400px;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.055);
+    text-align: center;
+
+}
+
+
+#word-guess-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#guess {
+    margin: 20px;
+    margin-right: 10px;
+    border: none;
+    outline: 2px solid white;
+    background-color: var(--backgroundColor);
+    font-size: 1.5rem;
+    padding: 0px 20px;
+    height: 55px;
+    border-radius: 25px 15px 15px 25px;
+    color: white;
+}
+
+
+#guess::placeholder {
+    color: rgba(255, 255, 255, 0.562);
+}
+
+#guess:hover {
+    outline-width: 3px;
+}
+
+#guess:focus {
+    outline-width: 3px;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.295);
+}
+
+#submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: 2px solid white;
+    height: 55px;
+    width: 100px;
+    padding: 0px 10px;
+    border-radius: 15px 25px 25px 15px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#submit-btn:hover {
+    background-color: white;
+    color: var(--backgroundColor);
+}
+
+#submit-btn:active {
+    transform: scale(1.1);
+}
+
+
+@keyframes zoomInRebound {
+    0% {
+        transform: scale(0);
+        /* Start small */
+    }
+
+    70% {
+        transform: scale(1.1);
+        /* Overshoot */
+    }
+
+    100% {
+        transform: scale(1);
+        /* Settle to final state */
+    }
+}
+
+#score {
+    padding: 20px;
+    font-size: 2rem;
+    animation: zoomInRebound 0.5s cubic-bezier(0.25, 1.5, 0.5, 1) forwards;
+}
